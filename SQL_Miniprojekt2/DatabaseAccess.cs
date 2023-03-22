@@ -60,8 +60,42 @@ namespace SQL_Miniprojekt2
             }
         }
 
+        //Modify specific person
 
-        
+        public static void ModifyPersonInDb(string oldPersonName, string newPersonName)
+        {
+            using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query($"UPDATE aax_person SET person_name = '{newPersonName}' " +
+                    $"WHERE person_name = '{oldPersonName}'", new DynamicParameters());
+                return;
+            }
+        }
+
+        //Modify specific project
+
+        public static void ModifyProjectInDb(string oldProjectName, string newProjectName)
+        {
+            using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query($"UPDATE aax_person SET person_name = '{newProjectName}' " +
+                    $"WHERE person_name = '{oldProjectName}'", new DynamicParameters());
+                return;
+            }
+        }
+        //Modify working hours on specific project
+
+        public static void ModifyWorkHoursInDb(string personName, string projectName, int hours)
+        {
+            using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query($"UPDATE aax_project_person SET hours = '{hours}' " +
+                    $"WHERE person_name = '{personName}' AND project_name = '{projectName}'", new DynamicParameters());
+                return;
+            }
+        }
+
+
     }
 }
 
