@@ -113,7 +113,54 @@ class Program
             Console.ReadLine();
         }
 
-       
+        //Replace name of person
+
+        static void ModifyPerson()
+        {
+            Console.WriteLine("Please type the name of the person you would like to replace");
+            string? oldPersonName = Console.ReadLine();
+            Console.WriteLine("Please type the name of the person you would like to add instead of " + oldPersonName);
+            string? newPersonName = Console.ReadLine();
+            //DatabaseAccess.ModifyPersonInDb(oldPersonName, newPersonName);
+            Console.WriteLine("Person name " + oldPersonName + " has been successfully replaced with " + newPersonName);
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
+
+        //Replace name of project
+
+        static void ModifyProject()
+        {
+            Console.WriteLine("Please type the name of the project you would like to replace");
+            string? oldProjectName = Console.ReadLine();
+            Console.WriteLine("Please type the name of the project you would like to add instead of " + oldProjectName);
+            string? newProjectName = Console.ReadLine();
+            //DatabaseAccess.ModifyProjectInDb(oldProjectName, newProjectName);
+            Console.WriteLine("Project name " + oldProjectName + " has been successfully replaced with " + newProjectName);
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
+
+        //Modify number of worked hours for specific person and project
+
+        static void ModifyWorkhours()
+        {
+            Console.WriteLine("Please enter the name of the person whos work hours you would like to modify");
+            string? personName = Console.ReadLine();
+            Console.WriteLine("Please enter the name of the project");
+            string? projectName = Console.ReadLine();
+            Console.WriteLine("Please enter the new number of hours");
+            string? input = Console.ReadLine();
+            int hours = Convert.ToInt32(input);
+            //DatabaseAccess.ModifyWorkHoursInDb(personName, projectName, hours);
+            Console.WriteLine("Work hours for " + personName + " on project " + projectName + " has been " +
+                "successfully updated to " + hours + "h");
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
     }
 }
 
