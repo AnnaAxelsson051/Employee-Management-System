@@ -72,4 +72,50 @@ class Program
             }
         }
 
+        static void AddNewPerson()
+        {
+            Console.WriteLine("Please type the name of the person you wold like to add");
+            string? personName = Console.ReadLine();
+            ///DatabaseAccess.AddNewPersonToDb(personName);
+            Console.WriteLine("Person " + personName + " has been successfully added");
+
+
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
+
+        static void AddNewProject()
+        {
+            Console.WriteLine("Please type the name of the project you would like to add");
+            string? projectName = Console.ReadLine();
+            //DatabaseAccess.AddNewProjectToDb(projectName);
+            Console.WriteLine("Project" + projectName + " has been successfully added");
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
+
+        static void RegisterWorkHours()
+        {
+            Console.WriteLine("Please type the name of the person you would like to add work hours to");
+            string? personName = Console.ReadLine();
+            Console.WriteLine("Please type the name of the project you would like to register");
+            string? projectName = Console.ReadLine();
+            Console.WriteLine("Please type the number of hours");
+            string? input = Console.ReadLine();
+            int hours = Convert.ToInt32(input);
+            //DatabaseAccess.RegisterWorkHoursInDb(personName, projectName, hours);
+            Console.WriteLine("Person " + personName + ", project " + projectName + " and " + hours
+                + "h has been successfully added");
+            Console.WriteLine();
+            Console.WriteLine("Press enter to return to main menu");
+            Console.ReadLine();
+        }
+
+       
     }
+}
+
+
+
