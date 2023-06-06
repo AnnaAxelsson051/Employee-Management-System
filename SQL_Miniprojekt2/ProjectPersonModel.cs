@@ -16,6 +16,7 @@ namespace SQL_Miniprojekt2
         public string personName { get; set; }
 
         public int hours { get; set; }
+        
     }
 }
 

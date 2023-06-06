@@ -76,7 +76,7 @@ class Program
         {
             Console.WriteLine("Please type the name of the person you wold like to add");
             string? personName = Console.ReadLine();
-            ///DatabaseAccess.AddNewPersonToDb(personName);
+            DatabaseAccess.AddNewPersonToDb(personName);
             Console.WriteLine("Person " + personName + " has been successfully added");
 
 
@@ -89,7 +89,7 @@ class Program
         {
             Console.WriteLine("Please type the name of the project you would like to add");
             string? projectName = Console.ReadLine();
-            //DatabaseAccess.AddNewProjectToDb(projectName);
+            DatabaseAccess.AddNewProjectToDb(projectName);
             Console.WriteLine("Project" + projectName + " has been successfully added");
             Console.WriteLine();
             Console.WriteLine("Press enter to return to main menu");
@@ -105,7 +105,7 @@ class Program
             Console.WriteLine("Please type the number of hours");
             string? input = Console.ReadLine();
             int hours = Convert.ToInt32(input);
-            //DatabaseAccess.RegisterWorkHoursInDb(personName, projectName, hours);
+            DatabaseAccess.RegisterWorkHoursInDb(personName, projectName, hours);
             Console.WriteLine("Person " + personName + ", project " + projectName + " and " + hours
                 + "h has been successfully added");
             Console.WriteLine();
@@ -121,7 +121,7 @@ class Program
             string? oldPersonName = Console.ReadLine();
             Console.WriteLine("Please type the name of the person you would like to add instead of " + oldPersonName);
             string? newPersonName = Console.ReadLine();
-            //DatabaseAccess.ModifyPersonInDb(oldPersonName, newPersonName);
+            DatabaseAccess.ModifyPersonInDb(oldPersonName, newPersonName);
             Console.WriteLine("Person name " + oldPersonName + " has been successfully replaced with " + newPersonName);
             Console.WriteLine();
             Console.WriteLine("Press enter to return to main menu");
@@ -136,7 +136,7 @@ class Program
             string? oldProjectName = Console.ReadLine();
             Console.WriteLine("Please type the name of the project you would like to add instead of " + oldProjectName);
             string? newProjectName = Console.ReadLine();
-            //DatabaseAccess.ModifyProjectInDb(oldProjectName, newProjectName);
+            DatabaseAccess.ModifyProjectInDb(oldProjectName, newProjectName);
             Console.WriteLine("Project name " + oldProjectName + " has been successfully replaced with " + newProjectName);
             Console.WriteLine();
             Console.WriteLine("Press enter to return to main menu");
@@ -154,7 +154,7 @@ class Program
             Console.WriteLine("Please enter the new number of hours");
             string? input = Console.ReadLine();
             int hours = Convert.ToInt32(input);
-            //DatabaseAccess.ModifyWorkHoursInDb(personName, projectName, hours);
+            DatabaseAccess.ModifyWorkHoursInDb(personName, projectName, hours);
             Console.WriteLine("Work hours for " + personName + " on project " + projectName + " has been " +
                 "successfully updated to " + hours + "h");
             Console.WriteLine();
