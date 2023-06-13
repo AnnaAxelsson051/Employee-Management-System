@@ -22,8 +22,6 @@ namespace SQL_Miniprojekt2
 
             using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
             {
-
-                //cnn.Execute
                 var query = cnn.Query($"INSERT INTO aax_person (person_name) VALUES ('{personName}')",
                     new DynamicParameters());
                 return;
@@ -37,8 +35,6 @@ namespace SQL_Miniprojekt2
 
             using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
             {
-
-                //cnn.Execute
                 var output = cnn.Query($"INSERT INTO aax_project (project_name) VALUES ('{projectName}')",
                     new DynamicParameters());
                 return;
@@ -51,9 +47,7 @@ namespace SQL_Miniprojekt2
         {
 
             using (IDbConnection cnn = new NpgsqlConnection(LoadConnectionString()))
-            {
-
-                ////cnn.Execute("INSERT INTO person_project (name, project_name, hours) values (@name, @project, @work_hours)");
+            {             
                 var output = cnn.Query($"INSERT INTO aax_project_person (person_name, project_name, hours) " +
                     $"VALUES ('{personName}', '{projectName}', {hours})", new DynamicParameters());
                 return;
@@ -72,7 +66,7 @@ namespace SQL_Miniprojekt2
             }
         }
 
-        //Modify specific project/
+        //Modify specific project
 
         public static void ModifyProjectInDb(string oldProjectName, string newProjectName)
         {
@@ -83,7 +77,7 @@ namespace SQL_Miniprojekt2
                 return;
             }
         }
-        //Modify working hours on specific project/
+        //Modify working hours on specific project
 
         public static void ModifyWorkHoursInDb(string personName, string projectName, int hours)
         {

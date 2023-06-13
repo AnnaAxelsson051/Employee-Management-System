@@ -28,34 +28,28 @@ class Program
                 switch (userOption)
                 {
                     case "1":
-                        Console.WriteLine("Add a new person");
                         AddNewPerson();
-                        //startMenu = false;
+        
                         break;
-                    case "2":
-                        Console.WriteLine("Add a new project");
+                    case "2":                       
                         AddNewProject();
-                        //startMenu = false;
+              
                         break;
                     case "3":
-                        Console.WriteLine("Report work hours");
                         RegisterWorkHours();
-                        //startMenu = false;
+                  
                         break;
                     case "4":
-                        Console.WriteLine("Modify person");
                         ModifyPerson();
-                        //startMenu = false;
+                 
                         break;
                     case "5":
-                        Console.WriteLine("Modify project");
                         ModifyProject();
-                        //startMenu = false;
+                    
                         break;
                     case "6":
-                        Console.WriteLine("Modify work hours");
                         ModifyWorkhours();
-                        //startMenu = false;
+                   
                         break;
 
                     case "E":
