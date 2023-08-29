@@ -6,7 +6,7 @@ This is a simple backend application with a menu that enables time reporting for
 
 ---
 
-## Technologies used:
+## Technologies used
 
 - C#
 - SQL
